@@ -1,0 +1,21 @@
+name: 'Tests'
+
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  test_app:
+    name: 'Run Tests'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: 'Setting Up Server'
+        run: pip install pytest==6.2.5
+      - name: 'Running Tests'
+        run: pytest
