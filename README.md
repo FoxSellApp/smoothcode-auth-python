@@ -1,4 +1,5 @@
 # SmoothCode Auth Python
+[![Tests](https://github.com/Smooth-Code-IO/smoothcode-auth-python/actions/workflows/tests.yml/badge.svg)](https://github.com/Smooth-Code-IO/smoothcode-auth-python/actions/workflows/tests.yml)
 
 ## Introduction
 Python Auth Library that exposes utility functions to authenticate SmoothCode requests
@@ -10,7 +11,7 @@ Python Auth Library that exposes utility functions to authenticate SmoothCode re
 ```
 * Install using
 ```shell
-pip install smoothcode-auth
+pip install smoothcode_auth
 ```
 
 ## Usage
