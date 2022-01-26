@@ -14,10 +14,10 @@ class TestSmoothCodeAuth:
 
     def test_is_webhook_request_with_correct_data(self):
         client_secret = 'client_secret'
-        request_hmac = '656718377faf656ccc037d8607ebfe3434197981aa1362db81210252ce92cd5c'
-        assert SmoothCodeAuth(request_hmac, client_secret).is_webhook_request({'request': 'webhook'})
+        request_hmac = '3999c5c10e23bee670e28ad67f446ac5e7b9c47ca1ee39c4bdf0c7bf056f8d71'
+        assert SmoothCodeAuth(request_hmac, client_secret).is_webhook_request({'id': 1235643534})
 
     def test_is_webhook_request_with_incorrect_data(self):
         client_secret = 'client_secret'
         request_hmac = 'request_hmac'
-        assert not SmoothCodeAuth(request_hmac, client_secret).is_webhook_request({'request': 'webhook'})
+        assert not SmoothCodeAuth(request_hmac, client_secret).is_webhook_request({'id': 'webhook'})

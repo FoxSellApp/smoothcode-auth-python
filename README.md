@@ -31,7 +31,7 @@ SmoothCodeAuth(request_hmac, client_secret).is_dashboard_request(shop) # returns
 from smoothcode_auth import SmoothCodeAuth
 
 # SmoothCode sends hmac in the Authorization Header of the request
-# It is hmac of the webhook data signed by your App Client Secret
+# It is hmac of the webhook id signed by your App Client Secret
 
 SmoothCodeAuth(request_hmac, client_secret).is_webhook_request(webhook_data) # returns True if the request is valid
 ```
