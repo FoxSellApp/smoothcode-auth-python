@@ -14,3 +14,7 @@ class SmoothCodeAuth:
     def is_webhook_request(self, webhook_data: dict):
         webhook_id = webhook_data.get('id')
         return generate_hmac(self.client_secret, str(webhook_id)) == self.hmac
+
+    def is_gdpr_webhook_request(self, webhook_data: dict):
+        shop_id = webhook_data.get('shop_id')
+        return generate_hmac(self.client_secret, str(shop_id)) == self.hmac
